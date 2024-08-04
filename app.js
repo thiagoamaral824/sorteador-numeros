@@ -3,6 +3,11 @@ function sortear() {
     let de = parseInt(document.getElementById('de').value);
     let ate = parseInt(document.getElementById('ate').value);
 
+    if (ate < de) {
+        alert("O valor 'até' deve ser maior ou igual ao valor 'de'.");
+        return;
+    }
+
     let sorteados = [];
 
     for (let i = 0; i < quantidade; i++) {
